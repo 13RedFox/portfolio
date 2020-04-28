@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-size: 100%;
+  font-family: $roboto;
+  color: $N61;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
