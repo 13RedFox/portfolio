@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  background-color: silver;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.info p {
+  text-align: center;
+  color: #ff0000;
+}
