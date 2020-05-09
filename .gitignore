@@ -3,3 +3,4 @@ package-lock.json
 *.psd
 *.zip
 keys.js
+prepros.config
