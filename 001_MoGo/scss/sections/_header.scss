@@ -1,0 +1,161 @@
+$style: navigation;
+.#{$style} {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: 28px 0;
+  color: $white;
+  @include transition(padding, background-color);
+  &.filled {
+    background-color: rgba($salmon, 0.7);
+    padding: 14px 0;
+  }
+  .container {
+    @include flex-row(space-between, center);
+  }
+
+  &__logo {
+    display: block;
+    @include text($S030, 700, $white);
+    font-family: $first-font;
+    line-height: 1;
+    @include transition(color);
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  &__nav {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__list {
+    @include flex-col(center, flex-start);
+    height: 100%;
+    @media screen and (min-width: 768px) {
+      @include flex-row(flex-start, center);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+    @media screen and (min-width: 768px) {
+      margin-right: 55px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    @include text($S018);
+    font-family: $first-font;
+    @include transition(color, border-color);
+    text-transform: uppercase;
+    position: relative;
+    @media screen and (min-width: 415px) {
+      font-size: $S014;
+      &:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: transparent;
+        @include transition(background-color);
+      }
+      &:hover {
+        color: $yellow;
+        &:after {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    svg {
+      fill: $white;
+      @include transition(fill);
+    }
+    &:hover {
+      svg {
+        fill: $yellow;
+      }
+    }
+  }
+
+  &__burger {
+    background-color: transparent;
+    border: none;
+    z-index: 101;
+    svg {
+      @include size($S024);
+      color: $white;
+    }
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__mobile-nav {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 80%;
+    background-image: linear-gradient(to top, #fce38a, #f38181),
+      linear-gradient(to bottom, #fce38a, #fce38a);
+    padding: 24px 32px;
+    z-index: 100;
+    &.active {
+      display: block;
+    }
+    @media screen and (min-width: 414px) {
+      max-width: 300px;
+    }
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+  animation-duration: 0.2s;
+}

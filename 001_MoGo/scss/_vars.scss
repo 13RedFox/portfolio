@@ -18,7 +18,16 @@ $C010: #e7e7e7;
 $base-size: 16px;
 
 $S150: 150px;
+$S100: 100px;
 $S072: 72px;
+$S070: 70px;
+$S065: 65px;
+$S060: 60px;
+$S055: 55px;
+$S050: 50px;
+$S045: 45px;
+$S040: 40px;
+$S036: 36px;
 $S030: 30px;
 $S024: 24px;
 $S020: 20px;
@@ -29,10 +38,18 @@ $S014: 14px;
 $S013: 13px;
 $S012: 12px;
 
+@function px_to_rem($target, $context: $base-size) {
+  @if $target==0 {
+    @return 0;
+  }
+
+  @return $target / $context + 0rem;
+}
+
 // FONTS:
 
-$base-font: "Montserrat", sans-serif;
-$first-font: "Roboto", sans-serif;
+$base-font: "Roboto", sans-serif;
+$first-font: "Montserrat", sans-serif;
 $second-font: "Kaushan Script", cursive;
 
 // SCREENS:

@@ -1,7 +1,130 @@
 $style: first-screen;
 .#{$style} {
+  display: flex;
+  align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url('./../../img/first-screen/intro.jpg') $yellow no-repeat;
+  background: linear-gradient(
+    to top,
+    rgba(252, 227, 138, 0.9) 0%,
+    rgba(243, 129, 129, 0.9) 100%
+  );
   background-size: cover;
   background-color: $yellow;
+  color: $white;
+
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(
+        to top,
+        rgba(252, 227, 138, 0.9) 0%,
+        rgba(243, 129, 129, 0.9) 100%
+      ),
+      url("./../../img/first-screen/intro.jpg") $yellow no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media screen and (min-width: 992px) {
+    // background-position: center;
+  }
+
+  &__title {
+    @include text($S030, 400, inherit);
+    font-family: $second-font;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 414px) {
+      @include text($S036, 400, inherit);
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+      @include text($S045, 400, inherit);
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 992px) {
+      @include text($S072, 400, inherit);
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    @include text($S055, 700, inherit);
+    font-family: $first-font;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+
+    @media screen and (min-width: 414px) {
+      @include text($S065, 700, inherit);
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 768px) {
+      @include text($S100, 700, inherit);
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 992px) {
+      @include text(120px, 700, inherit);
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include text(130px, 700, inherit);
+    }
+    @media screen and (min-width: 1440px) {
+      @include text($S150, 700, inherit);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 60px;
+      height: 3px;
+      background: $white;
+      transform: translate(-50%, -50%);
+
+      @media screen and (min-width: 414px) {
+        bottom: -30px;
+      }
+
+      @media screen and (min-width: 768px) {
+        bottom: -25px;
+      }
+    }
+  }
+
+  &__link {
+    width: 100%;
+    min-width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include text($S014, 700, inherit);
+    font-family: $first-font;
+    text-transform: uppercase;
+    border: 3px solid $white;
+    padding: 0 32px;
+    @include transition(color, border-color);
+    &:hover {
+      color: $yellow;
+      border-color: $yellow;
+    }
+
+    @media screen and (min-width: 414px) {
+      @include text($base-size, 700, inherit);
+    }
+
+    @media screen and (min-width: 768px) {
+      width: initial;
+    }
+  }
 }
