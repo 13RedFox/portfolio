@@ -33,7 +33,7 @@
 
 @mixin transition($types...) {
   transition-property: $types;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
   transition-timing-function: ease;
   @content;
 }

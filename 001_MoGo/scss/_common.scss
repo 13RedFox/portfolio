@@ -43,3 +43,74 @@ p {
   margin: 0;
   padding: 0;
 }
+
+.main__title {
+  @include text($S024, 400, $dimGray);
+  font-family: $second-font;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 414px) {
+    margin-bottom: 20px;
+  }
+}
+
+.main__subtitle {
+  position: relative;
+  @include text($S030, 700, $dimGray);
+  font-family: $first-font;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 414px) {
+    margin-bottom: 50px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 70px;
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 90px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background: $salmon;
+    transform: translate(-50%, -50%);
+
+    @media screen and (min-width: 414px) {
+      bottom: -25px;
+    }
+
+    @media screen and (min-width: 768px) {
+      bottom: -30px;
+    }
+
+    @media screen and (min-width: 768px) {
+      bottom: -40px;
+    }
+  }
+}
+
+.main__text {
+  @include text($S015, 400, $lightStateGray);
+  font-family: $base-font;
+}
+
+.p10 {
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 75px;
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 90px;
+  }
+}
