@@ -10,10 +10,11 @@
       type="image/x-icon"
     />
     <!-- Reset CSS: -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
-    />
+    /> -->
+    <link rel="stylesheet" href="./css/reset.css"> <!-- CSS reset -->
     <!-- Bootstrap 4: -->
     <link
       rel="stylesheet"
@@ -24,13 +25,39 @@
     <title>001 | MoGo</title>
     <!-- Main Style CSS: -->
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/modernizr.js"></script> <!-- Modernizr -->
   </head>
   <body>
     <!-- header -->
     <header id="navBar" class="navigation">
       <div class="container">
         <a href="#" class="navigation__logo">MoGo</a>
-        <button class="navigation__burger" id="burger">
+
+
+        <nav class="cd-stretchy-nav navigation__mob">
+          <a class="cd-nav-trigger" href="#0">
+            
+            <span aria-hidden="true"></span>
+          </a>
+      
+          <ul>
+            <li><a href="#about" class="active"><span>About</span></a></li>
+            <li><a href="#service"><span>Service</span></a></li>
+            <li><a href="#work"><span>Work</span></a></li>
+            <li><a href="#blog"><span>Blog</span></a></li>
+            <li><a href="#contact"><span>Contact</span></a></li>
+            <li><a href="#"><span></span></a></li>
+            <li><a href="#"><span></span></a></li>
+          </ul>
+      
+          <span aria-hidden="true" class="stretchy-nav-bg"></span>
+        </nav>
+
+
+
+
+
+<!--        <button class="navigation__burger" id="burger">
           <svg
             aria-hidden="true"
             focusable="false"
@@ -47,7 +74,7 @@
             ></path>
           </svg>
         </button>
-        <div id="mobileNav" class="navigation__mobile-nav fadeInRight">
+         <div id="mobileNav" class="navigation__mobile-nav fadeInRight">
           <ul class="navigation__list">
             <li class="navigation__item">
               <a href="#about" class="navigation__link">about</a>
@@ -97,7 +124,7 @@
               </button>
             </li>
           </ul>
-        </div>
+        </div> -->
         <nav class="navigation__nav">
           <ul class="navigation__list">
             <li class="navigation__item">
