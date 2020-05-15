@@ -84,3 +84,27 @@
     transform: translateY(-50%);
   }
 }
+
+@mixin svg($size: 16px, $color: black) {
+  width: $size;
+  height: $size;
+  fill: $color;
+  transition-property: fill, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  flex-shrink: 0;
+  @content;
+}
+
+@mixin mq($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin position($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
