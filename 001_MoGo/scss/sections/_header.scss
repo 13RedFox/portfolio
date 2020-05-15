@@ -7,10 +7,10 @@ $style: navigation;
   z-index: 20;
   padding: 28px 0;
   color: $white;
-  @include transition(background-color);
+  @include transition(padding, background-color);
   &.filled {
     background-color: rgba($salmon, 0.7);
-    // padding: 14px 0;
+    padding: 14px 0;
   }
   .container {
     @include flex-row(space-between, center);

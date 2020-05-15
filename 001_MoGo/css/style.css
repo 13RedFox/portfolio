@@ -133,7 +133,7 @@ p {
 .cd-stretchy-nav {
   position: absolute;
   z-index: 2;
-  top: 10px;
+  top: 20px;
   right: 3%;
   pointer-events: none;
 }
@@ -148,9 +148,9 @@ p {
   z-index: 1;
   top: 0;
   right: 0;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
   background: rgba(243, 129, 129, 0.7);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   transition-property: height, box-shadow;
@@ -170,8 +170,8 @@ p {
   z-index: 3;
   top: 0;
   right: 0;
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   /* replace text with image */
   overflow: hidden;
@@ -233,19 +233,21 @@ p {
 .cd-stretchy-nav ul {
   position: relative;
   z-index: 2;
-  padding: 60px 0 0;
+  padding: 40px 0 0;
   visibility: hidden;
-  transition-property: visible;
+  transition-property: visible, border-radius;
   transition-duration: 0.3s;
   transition-timing-function: ease;
   text-align: right;
+  background-color: rgba(243, 129, 129, 0.7);
+  border-radius: 20px;
 }
 .cd-stretchy-nav ul a {
   position: relative;
   display: block;
   height: 50px;
   line-height: 50px;
-  padding: 0 calc(1em + 60px) 0 1em;
+  padding: 0 calc(1em + 30px) 0 1em;
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.4rem;
   transition-property: color;
@@ -258,7 +260,7 @@ p {
   position: absolute;
   height: 16px;
   width: 16px;
-  right: 22px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%) scale(0);
   opacity: 0.6;
@@ -271,9 +273,9 @@ p {
   width: 3px;
   height: 16px;
   top: 50%;
-  right: 60px;
+  right: 40px;
   transform: translateX(3px) translateY(-50%) scaleY(0);
-  background-color: #0a9581;
+  background-color: #fce38a;
 }
 .cd-stretchy-nav ul li:first-of-type a::after {
   /* change custom icon using image sprites */
@@ -386,12 +388,13 @@ p {
   z-index: 20;
   padding: 28px 0;
   color: #ffffff;
-  transition-property: background-color;
+  transition-property: padding, background-color;
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
 .navigation.filled {
   background-color: rgba(243, 129, 129, 0.7);
+  padding: 14px 0;
 }
 .navigation .container {
   display: flex;

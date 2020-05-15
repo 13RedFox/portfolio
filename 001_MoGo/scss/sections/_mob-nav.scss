@@ -1,7 +1,7 @@
 .cd-stretchy-nav {
   position: absolute;
   z-index: 2;
-  top: 10px;
+  top: 20px;
   right: 3%;
   pointer-events: none;
 
@@ -15,9 +15,9 @@
     z-index: 1;
     top: 0;
     right: 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
     background: rgba($salmon, 0.7);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     @include transition(height, box-shadow);
@@ -38,8 +38,8 @@
   z-index: 3;
   top: 0;
   right: 0;
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   /* replace text with image */
   overflow: hidden;
@@ -61,7 +61,6 @@
     /* middle line of the hamburger icon */
     @include center(xy);
     @include transition(background-color);
-
   }
 
   span::after,
@@ -104,17 +103,19 @@
 .cd-stretchy-nav ul {
   position: relative;
   z-index: 2;
-  padding: 60px 0 0;
+  padding: 40px 0 0;
   visibility: hidden;
-  @include transition(visible);
+  @include transition(visible, border-radius);
   text-align: right;
+  background-color: rgba($salmon, 0.7);
+  border-radius: 20px;
 
   a {
     position: relative;
     display: block;
     height: 50px;
     line-height: 50px;
-    padding: 0 calc(1em + 60px) 0 1em;
+    padding: 0 calc(1em + 30px) 0 1em;
     color: rgba($white, 0.7);
     font-size: 1.4rem;
     @include transition(color);
@@ -125,7 +126,7 @@
       position: absolute;
       height: 16px;
       width: 16px;
-      right: 22px;
+      right: 12px;
       top: 50%;
       transform: translateY(-50%) scale(0);
       opacity: 0.6;
@@ -139,9 +140,9 @@
       width: 3px;
       height: 16px;
       top: 50%;
-      right: 60px;
+      right: 40px;
       transform: translateX(3px) translateY(-50%) scaleY(0);
-      background-color: $gossmer;
+      background-color: $yellow;
     }
   }
 
