@@ -805,3 +805,17 @@ p {
   color: inherit;
   text-transform: uppercase;
 }
+
+.service {
+  padding-top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .service {
+    padding-top: 70px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .service {
+    padding-top: 100px;
+  }
+}
