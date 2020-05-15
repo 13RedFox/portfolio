@@ -3,24 +3,19 @@ const navBar = document.querySelector("#navBar");
 const cd = document.querySelector(".navigation__mob");
 
 document.addEventListener("scroll", () => {
-  if (window.pageYOffset < navBar.clientHeight && window.pageYOffset < cd.clientHeight) {
+  if (
+    window.pageYOffset < navBar.clientHeight &&
+    window.pageYOffset < cd.clientHeight
+  ) {
     navBar.classList.remove("filled");
-    cd.style.top = '20px'
+    cd.style.top = "20px";
     // toTop.classList.remove("filled");
   } else {
     navBar.classList.add("filled");
-    cd.style.top = '10px'
+    cd.style.top = "10px";
     // toTop.classList.add("filled");
   }
 });
-
-// document.addEventListener("scroll", () => {
-//   if (window.pageYOffset < cd.clientHeight) {
-//     cd.classList.remove("filled__top");
-//   } else {
-//     cd.classList.remove("filled__top");
-//   }
-// });
 
 jQuery(document).ready(function () {
   if ($(".cd-stretchy-nav").length > 0) {

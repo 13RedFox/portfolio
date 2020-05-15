@@ -768,3 +768,40 @@ p {
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
+
+.facts {
+  background-color: #95e1d3;
+  color: #ffffff;
+}
+.facts__card {
+  display: none;
+  padding: 30px 0;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+.facts__card:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+@media screen and (min-width: 768px) {
+  .facts__card {
+    display: block;
+    width: 20%;
+    padding: 30px 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .facts__card {
+    padding: 90px 0;
+  }
+}
+.facts__card-number {
+  font-size: 72px;
+  font-weight: 700;
+  color: inherit;
+}
+.facts__card-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: inherit;
+  text-transform: uppercase;
+}

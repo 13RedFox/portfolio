@@ -1,0 +1,35 @@
+$styles: facts;
+.#{$styles} {
+  background-color: $cyan;
+  color: $white;
+
+  &__card {
+    display: none;
+    padding: 30px 0;
+    text-align: center;
+    border-right: 1px solid rgba($white, 0.3);
+
+    &:first-child {
+      border-left: 1px solid rgba($white, 0.3);
+    }
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      width: 20%;
+      padding: 30px 0;
+    }
+
+    @media screen and (min-width: 992px) {
+      padding: 90px 0;
+    }
+
+    &-number {
+      @include text($S072, 700);
+    }
+
+    &-text {
+      @include text($S014);
+      text-transform: uppercase;
+    }
+  }
+}
