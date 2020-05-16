@@ -884,3 +884,65 @@ p {
 .feature__tablet {
   position: absolute;
 }
+
+.wwd {
+  min-height: 100vh;
+  padding: 50px 0;
+}
+@media screen and (min-width: 768px) {
+  .wwd {
+    padding: 70px 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .wwd {
+    padding: 100px 0;
+  }
+}
+.wwd__wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 66.8%;
+}
+.wwd__wrapper img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.wwd__wrap {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.wwd__wrap-icon {
+  margin-right: 15px;
+}
+.wwd__wrap-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.wwd__wrap-text {
+  font-size: 15px;
+  font-weight: 400;
+  color: #999999;
+  line-height: 24px;
+  font-style: italic;
+  padding: 15px 20px;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+}
+.wwd .card-header {
+  background-color: transparent;
+  border-bottom: none;
+}
