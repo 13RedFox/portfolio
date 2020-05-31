@@ -1,0 +1,11 @@
+// * Main style *
+
+@import "vars";
+@import "mixins";
+@import "common";
+
+// * Sections style *
+
+@import './sections/header';
+@import './sections/hero';
+@import './sections/hero-call';

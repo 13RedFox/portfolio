@@ -1,0 +1,88 @@
+$style: quote;
+.#{$style} {
+  padding: 70px 0;
+  background: $mintCream;
+
+  &__slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+    &-wrap {
+      width: 1000px;
+      display: flex;
+    }
+
+    &-wrapIcon {
+      $size: 150px;
+      width: 100%;
+      max-width: $size;
+      height: $size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $cyan;
+      margin-right: 60px;
+    }
+
+    &-info {
+      padding-top: 10px;
+    }
+
+    &-text {
+      @include text($S024, 400, $lightStateGray);
+      font-style: italic;
+    }
+
+    &-author {
+      position: relative;
+      font-family: $second-font;
+      @include text($S024, 400, $dimGray);
+      text-transform: capitalize;
+      margin-left: 70px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: -40px;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 4px;
+        background: $salmon;
+      }
+    }
+  }
+
+  .carousel-control-prev {
+    width: 30px;
+    left: -55px;
+  }
+
+  .carousel-control-next {
+    width: 30px;
+    right: -55px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon{
+    $size: 13px;
+    width: $size;
+    height: $size;
+    background-image: none;
+    border-top: 3px solid $silver;
+
+  }
+
+  .carousel-control-prev-icon {
+    border-left: 3px solid $silver;
+    transform: rotate(-45deg);
+  }
+
+  .carousel-control-next-icon {
+    border-right: 3px solid $silver;
+    transform: rotate(45deg);
+  }
+}

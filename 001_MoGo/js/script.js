@@ -17,12 +17,12 @@ document.addEventListener("scroll", () => {
   }
 });
 
-jQuery(document).ready(function () {
+$(document).ready(function () {
   if ($(".cd-stretchy-nav").length > 0) {
-    var stretchyNavs = $(".cd-stretchy-nav");
+    let stretchyNavs = $(".cd-stretchy-nav");
 
     stretchyNavs.each(function () {
-      var stretchyNav = $(this),
+      let stretchyNav = $(this),
         stretchyNavTrigger = stretchyNav.find(".cd-nav-trigger");
 
       stretchyNavTrigger.on("click", function (event) {

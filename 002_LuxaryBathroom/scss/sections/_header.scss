@@ -1,0 +1,104 @@
+$style: header;
+.#{$style} {
+  background: $space;
+
+  &__search {
+    width: 300px;
+    height: 40px;
+    background: $grey;
+    @include text($S012, 400, $dark);
+    border: none;
+    padding-left: 20px;
+  }
+
+  &__logo {
+    width: 265px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $dark;
+    padding: 20px 0 15px;
+    text-transform: uppercase;
+
+    &-sup {
+      @include text($S020, 700, $space);
+      letter-spacing: 3px;
+    }
+
+    &-sub {
+      @include text($S030, 700, $space);
+      letter-spacing: 4px;
+    }
+  }
+
+  &__topNavbar {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $grey;
+
+    &-item {
+      position: relative;
+
+      &:nth-child(1)::after,
+      &:nth-child(2)::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: -17px;
+        width: 1px;
+        height: 20px;
+        background: $brown;
+        transform: translate(50%, -50%);
+      }
+    }
+
+    &-link {
+      display: block;
+      @include text($S012, 600, $dark);
+      text-transform: uppercase;
+      @include transition(color);
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
+  &__navigation {
+    width: 100%;
+  }
+
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      padding-bottom: 15px;
+    }
+
+    &-link {
+      position: relative;
+      display: block;
+      @include text($S015, 600, $dark);
+      text-transform: uppercase;
+
+      &:hover {
+        color: $dark;
+      }
+
+      &:hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        width: 100%;
+        height: 3px;
+        background: $dark;
+      }
+    }
+  }
+}

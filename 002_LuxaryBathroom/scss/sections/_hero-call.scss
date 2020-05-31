@@ -1,0 +1,32 @@
+$style: hero-call;
+.#{$style} {
+  background: $dark;
+
+  &__wrapper {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+
+    &-text {
+      @include text($S039, 700, $white);
+      line-height: 48px;
+    }
+
+    &-btn {
+      width: 240px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $green;
+      @include text($S020, 700, $white);
+      @include transition(color);
+
+      &:hover {
+        color: $light;
+      }
+    }
+  }
+}

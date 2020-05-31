@@ -1,26 +1,18 @@
 // COLORS:
-$astronautBlue: #003c5d; // Astronaut Blue
-$deYork: #9acd91; // De York
-$gossamer: #0a9581; // Gossamer
 
 $white: #ffffff;
 $black: #000000;
-$cyan: #95e1d3;
-$dimGray: #333333;
-$lightStateGray: #999999;
-$salmon: #f38181;
-$silver: #cccccc;
-$yellow: #fce38a;
-$lightGray: #e5e5e5;
-$mintCream: #f8f8f8;
-$C011: #f5f5f5;
-$C010: #e7e7e7;
+$dark: #242526;
+$brown: #544C4A;
+$light: #878A8C;
+$space: #F2F2F2;
+$grey: #D9D9D9;
+$green: #5A735B;
 
 // SIZE:
 
 $base-size: 16px;
 
-$S150: 150px;
 $S100: 100px;
 $S072: 72px;
 $S070: 70px;
@@ -28,10 +20,12 @@ $S065: 65px;
 $S060: 60px;
 $S055: 55px;
 $S050: 50px;
-$S045: 45px;
+$S048: 48px;
 $S040: 40px;
+$S039: 39px;
 $S036: 36px;
 $S030: 30px;
+$S025: 25px;
 $S024: 24px;
 $S020: 20px;
 $S018: 18px;
@@ -51,9 +45,7 @@ $S012: 12px;
 
 // FONTS:
 
-$base-font: "Roboto", sans-serif;
-$first-font: "Montserrat", sans-serif;
-$second-font: "Kaushan Script", cursive;
+$base-font: 'Montserrat', sans-serif;
 
 // SCREENS:
 
