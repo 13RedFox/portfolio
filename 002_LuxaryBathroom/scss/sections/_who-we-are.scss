@@ -1,0 +1,47 @@
+$style: who-we-are;
+.#{$style} {
+  padding: 150px 0;
+
+  &__wrap {
+    padding-top: 80px;
+
+    &-title {
+      @include text($S030, 700, $dark);
+      line-height: 38px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    &-text {
+      @include text($S016, 400, $light);
+      line-height: 26px;
+      text-align: justify;
+      margin-bottom: 40px;
+    }
+
+    &-inner {
+      margin-bottom: 20px;
+    }
+
+    &-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 440px;
+      height: 55px;
+      @include text($S020, 700, $white);
+      line-height: 30px;
+      text-transform: uppercase;
+      background: $green;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include padding-hack(103.3%, cover);
+  }
+}

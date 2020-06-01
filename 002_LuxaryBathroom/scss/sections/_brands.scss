@@ -1,0 +1,21 @@
+$style: brands;
+.#{$style} {
+  background: $space;
+  padding: 67px 0 75px;
+
+  &__title {
+    width: 100%;
+    max-width: 460px;
+    @include text($S030, 700, $dark);
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 67px;
+  }
+
+  &__logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
