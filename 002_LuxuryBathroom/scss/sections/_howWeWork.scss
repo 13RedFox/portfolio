@@ -1,0 +1,47 @@
+$style: how-we-work;
+.#{$style} {
+  padding: 143px 0 150px;
+
+  &__title {
+    width: 100%;
+    max-width: 765px;
+    @include text($S030, 700, $dark);
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $light;
+    padding: 35px 0;
+
+    &-icon {
+      $size: 118px;
+      width: $size;
+      height: $size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $light;
+      border-radius: 50%;
+      margin-bottom: 32px;
+    }
+
+    &-title {
+      @include text($S020, 700, $dark);
+      line-height: 36px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    &-text {
+      width: 100%;
+      max-width: 205px;
+      @include text($S016, 400, $silver);
+      line-height: 28px;
+      text-align: center;
+    }
+  }
+}

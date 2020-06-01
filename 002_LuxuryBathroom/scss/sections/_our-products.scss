@@ -1,0 +1,31 @@
+$style: our-products;
+.#{$style} {
+  padding: 75px 55px;
+  background: $space;
+
+  &__title {
+    @include text($S030, 700, $dark);
+    line-height: 38px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__card {
+    @include padding-hack(106.1%, cover);
+
+    &-text {
+      width: 100%;
+      height: 40px;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      @include text($S020, 700, $white);
+      line-height: 24px;
+      text-transform: uppercase;
+      background: $green;
+    }
+  }
+}
